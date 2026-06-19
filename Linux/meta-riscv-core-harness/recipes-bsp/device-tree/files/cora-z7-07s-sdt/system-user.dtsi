@@ -1,0 +1,13 @@
+&{/} {
+    compatible = "xlnx,cora-z7-07s", "xlnx,zynq-7000";
+
+    axi {
+        /delete-node/ ptm@f889d000;
+
+        funnel@f8804000 {
+            in-ports {
+                /delete-node/ port@1;
+            };
+        };
+    };
+};

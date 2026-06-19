@@ -1,0 +1,11 @@
+[Unit]
+Description=Configuration IP Ethernet
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ip addr add 192.168.8.2/24 dev end0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
